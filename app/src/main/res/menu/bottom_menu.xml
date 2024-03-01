@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id = "@+id/bottom_home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Home"/>
+
+    <item
+        android:id = "@+id/bottom_cam"
+        android:icon="@drawable/baseline_camera_alt_24"
+        android:title="Identification"/>
+
+    <item
+        android:id = "@+id/bottom_fav"
+        android:icon="@drawable/baseline_favorite_24"
+        android:title="Favorite"/>
+
+    <item
+        android:id = "@+id/bottom_profile"
+        android:icon="@drawable/baseline_person_pin_24"
+        android:title="Profile"/>
+</menu>
