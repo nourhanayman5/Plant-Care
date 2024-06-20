@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
@@ -19,16 +21,26 @@ import java.util.Locale;
 public class Register extends AppCompatActivity {
 
     User user_name;
+    ImageView arrow;
+    TextView register ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        arrow = (ImageView) findViewById(R.id.regarrow);
         user_name = (User) getApplicationContext();
-        Button btn_Login = (Button)findViewById(R.id.Login);
+        TextView btn_Login = (TextView) findViewById(R.id.Login);
         Button btn_Register = (Button)findViewById(R.id.SignUp);
         DatabaseClass Add_User=new DatabaseClass(getApplicationContext());
         EditText clenedar = (EditText) findViewById(R.id.birth) ;
+        arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent arrow = new Intent(Register.this,StartActivity.class);
+                startActivity(arrow);
+            }
+        });
         btn_Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

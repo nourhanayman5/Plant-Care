@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/imagebackground"
+    android:background="@drawable/homefav"
     tools:context=".Favorite">
 
 
@@ -40,15 +40,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_menu" />
 
-    <Button
+    <TextView
         android:id="@+id/fav_btn"
         android:layout_width="match_parent"
         android:layout_height="70sp"
-        android:layout_marginTop="0dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/adamina"
+
         android:text="Favorite List"
-        android:background="@drawable/favoriteplant"
+        android:textSize="40sp"
+        android:textStyle="bold"
         app:backgroundTint="@null"
-        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"

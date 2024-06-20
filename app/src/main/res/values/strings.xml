@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Plant Care</string>
+    <string name="fav_icon_description" />
 </resources>

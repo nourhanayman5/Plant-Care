@@ -72,49 +72,7 @@ public class Home extends AppCompatActivity {
         adapter = new MyAdapter(this, dataList);
         recyclerView.setAdapter(adapter);
 
-//// Ensure to perform database operations asynchronously to avoid blocking the main UI thread
-//        new AsyncTask<Void, Void, Void>() {
-//            @Override
-//            protected Void doInBackground(Void... voids) {
-//                SQLiteDatabase db = plant.getWritableDatabase();
-//
-//
-//
-//                // Loop through the static data and insert each row into the database
-//                for (int j = 0; j < plantnames.length; j++) {
-//                    // Create a ContentValues object to store the values
-//                    ContentValues values = new ContentValues();
-//                    values.put("NAME", plantnames[j]); // Assuming "name" is the column name
-//                    values.put("IMAGE", plantImages[j]);
-//
-//                    // Insert the data into the table
-//                    long newRowId = db.insert("PLANTHOME", null, values);
-//
-//                    // Check if the insertion was successful
-//                    if (newRowId != -1) {
-//                        // Data inserted successfully
-//                        Log.d("Insertion", "Data inserted successfully. Row ID: " + newRowId);
-//                    } else {
-//                        // Failed to insert data
-//                        Log.e("Insertion", "Failed to insert data.");
-//                    }
-//                }
-//
-//                // Close the database connection
-//                db.close();
-//                return null;
-//            }
-//
-//            @Override
-//            protected void onPostExecute(Void aVoid) {
-//                super.onPostExecute(aVoid);
-//                // Once database operations are completed, update RecyclerView data
-//                dataList.clear();
-//                dataList.addAll(plant.getAllData());
-//                adapter.notifyDataSetChanged();
-//            }
-//        }.execute();
-//
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.navBar);
         bottomNavigationView.setSelectedItemId(R.id.bottom_home);
 

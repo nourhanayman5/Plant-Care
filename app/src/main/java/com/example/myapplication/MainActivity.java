@@ -11,12 +11,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     String user;
+    ImageView arrow;
+    TextView register;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,11 +29,19 @@ public class MainActivity extends AppCompatActivity {
         User userEmail = (User) getApplicationContext();
         EditText email=(EditText) findViewById(R.id.Email);
         EditText password=(EditText) findViewById(R.id.Password);
-        Button login =(Button) findViewById(R.id.Login);
-
-        Button register =(Button) findViewById(R.id.Register);
+        ImageView login =(ImageView) findViewById(R.id.Login);
+        register = (TextView) findViewById(R.id.textView5);
+        arrow = (ImageView) findViewById(R.id.logarrow);
+//        Button register =(Button) findViewById(R.id.Register);
         CheckBox checkBox =(CheckBox) findViewById(R.id.checkBox) ;
 
+        arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent arrow = new Intent(MainActivity.this,Api.class);
+                startActivity(arrow);
+            }
+        });
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -49,7 +49,7 @@ public class Change_Photo extends AppCompatActivity {
         useremail= (User) getApplicationContext();
         user = useremail.getEmail();
         change_photo=(Button) findViewById(R.id.change_pro_photo);
-        change_pass=(Button) findViewById(R.id.change_password);
+//        change_pass=(Button) findViewById(R.id.change_password);
         profile_image=(ImageView)findViewById(R.id.profile_photo);
         DB = new DatabaseClass(this);
         bitmap=DB.getImageProfileFromDatabase(user);

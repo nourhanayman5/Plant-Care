@@ -42,7 +42,7 @@ public class Favorite extends AppCompatActivity {
         setContentView(R.layout.activity_favorite);
 
         user = (User) getApplicationContext();
-        String u_name = user != null ? user.getUserName() : "";
+        String u_name = user != null ? user.getEmail() : "";
         recyclerView = findViewById(R.id.plantview1);
         dataList = new ArrayList<>();
         plant = new FavDB(this);

@@ -13,4 +13,8 @@
     <color name="lavender">#D4EFDF</color>
     <color name="bordercolor">#D4EFDF</color>
     <color name="transparent">#00FFFFFF</color>
+    <color name="lightgreen">#73a802</color>
+    <color name="logreg">#446300</color>
+    <color name="login">#5f8a00</color>
+<!--    #91cd11-->
 </resources>

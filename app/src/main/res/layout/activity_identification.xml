@@ -4,84 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/imagebackground"
+    android:background="@drawable/greenbackground"
     tools:context=".Identification">
 
-    <RelativeLayout
 
+    <ImageView
+        android:id="@+id/camera"
+        android:layout_width="167dp"
+        android:layout_height="169dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.836"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.677"
+        app:srcCompat="@drawable/cameraicon" />
+
+    <ImageView
+        android:id="@+id/gallery"
+        android:layout_width="142dp"
+        android:layout_height="115dp"
+        android:layout_alignLeft="@+id/camera"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.662"
+        app:srcCompat="@drawable/galleryimage" />
+
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Identify"
+        android:textAlignment="center"
+        android:textColor="@color/lightgreen"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.348" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:text="Plants Around You"
+        android:textAlignment="center"
+        android:textColor="@color/lightgreen"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/andika_new_basic_bold_italic"
-            android:text="Plants Identification"
-            android:textAlignment="center"
-            android:textColor="@color/darkgreen"
-            android:textColorLink="#E8EAE4E4"
-            android:textSize="35dp" />
-
-
-        <ImageView
-            android:id="@+id/image"
-            android:layout_width="170dp"
-            android:layout_height="170dp"
-            android:layout_below="@+id/title"
-            android:layout_centerHorizontal="true"
-            app:srcCompat="@drawable/plant"
-            app:backgroundTint="@null"
-            android:layout_marginTop="20dp"
-            />
-
-        <TextView
-            android:id="@+id/result"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/predictBtn"
-            android:layout_marginTop="45dp"
-            android:layout_marginLeft="120sp"
-            android:text=""
-            android:textAlignment="center"
-            android:textSize="30dp" />
-
-        <Button
-            android:id="@+id/predictBtn"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_below="@+id/image"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
-            android:background="@drawable/button_design"
-            app:backgroundTint="@null"
-            android:text="Show"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-
-        <Button
-            android:id="@+id/favorite"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/predictBtn"
-            android:layout_marginTop="109dp"
-            android:layout_marginLeft="80sp"
-            android:background="@drawable/button_design"
-            app:backgroundTint="@null"
-            android:text="Add to Favorite"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-
-
-    </RelativeLayout>
-
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.444" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navBar"
